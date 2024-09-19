@@ -17,8 +17,8 @@ const Description = () => {
 
 
   return (
-    <div className='bg-[#f2f2f2] mx-2 md:mx-0'>
-      <h3 className='py-28 text-6xl max-w-[75%] m-auto text-center '>Crafted for Your Everyday Elegance.</h3>
+    <div className='bg-[#f2f2f2] px-2 md:mx-0'>
+      <h3 className='md:py-28 py-20 md:text-6xl text-[2.5rem] leading-[3rem] max-w-[75%] m-auto text-center '>Crafted for Your Everyday Elegance.</h3>
       <div className='md:flex gap-16 px-4 md:px-16'>
 
         <aside className='sticky top-20 w-[25%] h-[100vh] space-y-8 py-4 pb-14 hidden md:block  after:absolute after:h-[84%] after:w-[1px] after:left-0 after:bg-[#d9d9d9] after:rounded-md after:top-0'>
@@ -82,7 +82,7 @@ const Description = () => {
                 fill
               />
             </div>
-            <div className=' py-12 pb-36  md:grid md:grid-cols-2 md:gap-6 md:grid-flow-col   '>
+            <div className=' py-12 lg:pb-36  md:grid md:grid-cols-2 md:gap-6 md:grid-flow-col   '>
               <h4
                 className='text-3xl leading-10 md:max-w-[20ch] pb-6'>
                 Whispering Silk is the epitome of grace and refinement.</h4>

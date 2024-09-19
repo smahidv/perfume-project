@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const Contacts = () => {
   return (
-    <div className='flex justify-center items-center h-screen px-4'>
+    <div className='bg-white flex justify-center items-center md:h-screen h-[80vh] px-4'>
       <div className="space-y-10 ">
         <div className="relative w-fit mx-auto">
           <svg

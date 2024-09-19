@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Footer } from "@/components";
 import {Noto_Serif_Khitan_Small_Script } from 'next/font/google';
 
 const notoSerifKhitan = Noto_Serif_Khitan_Small_Script({
@@ -23,7 +22,6 @@ export default function RootLayout({
     <html lang="en" className={notoSerifKhitan.className}>
       <body>
         {children}
-        {/* <Footer/> */}
       </body>
     </html>
   );

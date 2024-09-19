@@ -42,6 +42,11 @@ const config = {
           "50%, 100%": { opacity: 1 },
         },
       },
+      screens: {
+        'mobi': {'min': '0px', 'max': '500px'},
+        'xsmobi': {'min': '0px', 'max': '400px'},
+
+      }
     },
   },
   plugins: [

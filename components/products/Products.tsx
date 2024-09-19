@@ -1,5 +1,5 @@
-import SingleProduct from "./SingleProduct"
 
+import SingleProduct from "./SingleProduct";
 
 const productList = [
   {
@@ -40,26 +40,30 @@ const productList = [
   },
 ];
 
-
 const Products = () => {
+
+
+
   return (
-    <div className='px-10 pt-28  '>
+    <div 
+
+      className='bg-white px-10 pt-28'
+    >
       <div 
-      className= 'pb-12   flex overflow-x-scroll scrollbar-webkit  snap-x overflow-y-clip gap-8 '
+        className='pb-12 flex scrollbar-webkit snap-x overflow-auto gap-8'
       >
-          {productList.map((product) => (
-            <SingleProduct
-              key={product.title}
-              title={product.title}
-              description={product.description}
-              price={product.price}
-              imageSrc={product.imageSrc}
-            />
-          ))}
-        </div>
-
+        {productList.map((product) => (
+          <SingleProduct
+            key={product.title}
+            title={product.title}
+            description={product.description}
+            price={product.price}
+            imageSrc={product.imageSrc}
+          />
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Products
+export default Products;

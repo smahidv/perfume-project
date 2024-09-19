@@ -3,96 +3,82 @@
 import { useState, useEffect, useRef } from "react";
 
 const Header = () => {
-	const [fontSize, setFontSize] = useState(7.5);
-	const [showText, setShowText] = useState(false);
-	const [videoLoaded, setVideoLoaded] = useState(false); // New state for video load
-	const videoRef = useRef<HTMLVideoElement | null>(null);
+	
+	const [mobifontSize, setMobiFontSize] = useState(8.5);
+	// const [videoLoaded, setVideoLoaded] = useState(false);
+	const textRef = useRef<HTMLDivElement | null>(null);
+	const [isSticky, setIsSticky] = useState(false);
 
-	// useEffect(() => {
-	// 	const handleScroll = () => {
-	// 		const scrollY = window.scrollY;
-	// 		const newFontSize = Math.max(1.5, 7.5 - scrollY * 0.01);
+	useEffect(() => {
+		// Function to update font size based on screen width and scroll position
+		const updateFontSizeAndSticky = () => {
+		  requestAnimationFrame(() => {
+			const isMobile = window.matchMedia("(max-width: 768px)").matches;
+			const scrollY = window.scrollY;
+	
+			// Font size adjustment
+			const newFontSize = Math.max(1.5, 8.5 - scrollY * 0.012);
+			const mobiSize = Math.max(5, 7.5 - scrollY * 0.01);
+			setMobiFontSize(isMobile ? mobiSize : newFontSize);
+	
+			// Sticky header condition
+			if (textRef.current) {
+			  const rect = textRef.current.getBoundingClientRect();
+			  setIsSticky(rect.top <= 0);
+			}
+		  });
+		};
+	
+		// Initial update
+		updateFontSizeAndSticky();
+	
+		// Update font size and sticky header on scroll and resize
+		window.addEventListener("scroll", updateFontSizeAndSticky);
+		window.addEventListener("resize", updateFontSizeAndSticky);
+	
+		return () => {
+		  window.removeEventListener("scroll", updateFontSizeAndSticky);
+		  window.removeEventListener("resize", updateFontSizeAndSticky);
+		};
+	  }, []);
 
-	// 		setFontSize(newFontSize);
-	// 	};
-
-	// 	window.addEventListener("scroll", handleScroll);
-
-	// 	return () => {
-	// 		window.removeEventListener("scroll", handleScroll);
-	// 	};
-	// }, []);
-
-	// useEffect(() => {
-	// 	const observer = new IntersectionObserver(
-	// 		(entries) => {
-	// 			entries.forEach((entry) => {
-	// 				if (!entry.isIntersecting) {
-	// 					setShowText(true);
-	// 				} else {
-	// 					setShowText(false);
-	// 				}
-	// 			});
-	// 		},
-	// 		{ threshold: 0.128 }
-	// 	);
-
-	// 	if (videoRef.current) {
-	// 		observer.observe(videoRef.current);
-	// 	}
-
-	// 	return () => {
-	// 		if (videoRef.current) {
-	// 			observer.unobserve(videoRef.current);
-	// 		}
-	// 	};
-	// }, []);
-
-	// Video load handler
-	const handleVideoLoaded = () => {
-		setVideoLoaded(true); // Set video as loaded
-	};
+	// const handleVideoLoaded = () => {
+	// 	console.log("Video loaded"); 
+	// 	setVideoLoaded(false);
+	
+	// };
 
 	return (
-		<header className="relative min-w-[100dvw] h-[100dvh] overflow-hidden">
-			{showText && (
-				<div className="fixed top-0 flex justify-center w-full items-center bg-white py-2 shadow-md z-50">
-					<p className="font-notoSerifKhitan text-2xl">Scent of a Dream</p>
-					<button className="uppercase absolute right-2 md:right-6 grid space-y-1">
-						<span className="hidden md:block">menu</span>
-						<span className="bg-black w-[20px] h-[1.5px] block md:hidden"></span>
-						<span className="bg-black w-[20px] h-[0.5px] block md:hidden"></span>
-						<span className="bg-black w-[20px] h-[0.5px] block md:hidden"></span>
-					</button>
-				</div>
-			)}
+		<header className="relative  min-w-[100dvw] h-[100vh] overflow-hidden ">
+			
+
+			<video
+				src={require("../public/perfume_video.mp4")}
+				className=" -z-40 fixed w-full h-[100dvh] object-cover"
+				autoPlay
+				muted
+				loop
+				preload="auto" 
+			
+			/>
 
 			<div
-				className={`w-full h-full absolute top-0 left-0 z-10 bg-black ${
-					videoLoaded ? "hidden" : ""
-				}`}
-			></div>
-		
-				<video
-					ref={videoRef}
-					src={require("../public/perfume_video.mp4")}
-					className="top-0 -z-40 fixed   w-full  h-[100dvh] object-cover"
-					autoPlay
-					muted
-					loop
-					preload="auto"
-					onLoadedData={handleVideoLoaded} // Video load event
-				/>
-		
+				ref={textRef}
+				className="absolute bottom-3 flex justify-center w-full "
+			>
+				<h1
+					className="text-white font-notoSerifKhitan uppercase leading-none overflow-hidden"
+					style={{ fontSize: `${mobifontSize}vw` }}
+				>
+					Scent of a Dream
+				</h1>
+			</div>
 
-			{!showText && (
-				<div className="absolute bottom-3 flex justify-center w-full z-30">
-					<h1
-						className="text-white font-notoSerifKhitan uppercase"
-						style={{ fontSize: `${fontSize}vw` }}
-					>
+			{isSticky && (
+				<div className="fixed left-0 top-0 flex justify-center w-full items-start bg-white py-2 shadow-md z-50">
+					<p className="font-notoSerifKhitan !leading-none text-2xl mobi:!text-[1.5rem] xsmobi:!text-[1rem]">
 						Scent of a Dream
-					</h1>
+					</p>
 				</div>
 			)}
 		</header>

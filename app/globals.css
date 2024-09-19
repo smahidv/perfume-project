@@ -5,6 +5,7 @@
 
 :root {
    --paragraph-color:#646467;
+   --font-size-mobil:16px;
     
 }
 *,
@@ -18,7 +19,7 @@
 * {
 	margin: 0;
 	padding: 0;
-
+/* border:1px solid red; */
 }
 
 /*
@@ -81,3 +82,6 @@ h2 span {
 	border-radius: .2em;
 	object-fit: contain;
 }
+
+
+
