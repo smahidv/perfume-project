@@ -12,7 +12,7 @@ export default function Home() {
       <Products/>
       <Contacts/>
     </main>
-    <Footer/>
+    {/* <Footer/> */}
     </div>
   );
 }
