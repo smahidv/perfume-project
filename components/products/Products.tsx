@@ -47,7 +47,7 @@ const Products = () => {
   return (
     <div 
 
-      className='bg-white px-10 pt-28'
+      className='bg-white md:px-10 px-4 pt-28'
     >
       <div 
         className='pb-12 flex scrollbar-webkit snap-x overflow-auto gap-8'

@@ -4,7 +4,7 @@ import React from 'react'
 const Partners = () => {
   return (
     <div className='bg-white'>
-      <div className='md:text-4xl text-[1.88rem] leading-[2.8rem] font-notoSerifKhitan md:px-12 px-6 pt-24'>
+      <div className='md:text-4xl text-2xl md:leading-[2.8rem] font-notoSerifKhitan md:px-12 px-6 pt-24'>
         We’re proud to partner <br /> with the best
       </div>
       <div className='flex gap-4 animate-infinite-scroll border-brands py-16 pb-24 '>

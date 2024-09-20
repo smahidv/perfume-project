@@ -5,7 +5,6 @@ import { useState, useEffect, useRef } from "react";
 const Header = () => {
 	
 	const [mobifontSize, setMobiFontSize] = useState(8.5);
-	// const [videoLoaded, setVideoLoaded] = useState(false);
 	const textRef = useRef<HTMLDivElement | null>(null);
 	const [isSticky, setIsSticky] = useState(false);
 
@@ -18,7 +17,7 @@ const Header = () => {
 	
 			// Font size adjustment
 			const newFontSize = Math.max(1.5, 8.5 - scrollY * 0.012);
-			const mobiSize = Math.max(5, 7.5 - scrollY * 0.01);
+			const mobiSize = Math.max(5.2, 8.8 - scrollY * 0.008);
 			setMobiFontSize(isMobile ? mobiSize : newFontSize);
 	
 			// Sticky header condition
@@ -42,25 +41,32 @@ const Header = () => {
 		};
 	  }, []);
 
-	// const handleVideoLoaded = () => {
-	// 	console.log("Video loaded"); 
-	// 	setVideoLoaded(false);
-	
-	// };
+
 
 	return (
 		<header className="relative  min-w-[100dvw] h-[100vh] overflow-hidden ">
 			
 
-			<video
-				src={require("../public/perfume_video.mp4")}
+			 <video
+				src="/preload_video.mp4"
+				className="-z-40 fixed w-full h-[100dvh] object-cover"
+				muted
+				loop
+				playsInline
+				preload="auto"
+			>
+				Your browser does not support the video tag.
+		   </video>
+		 <video
+				src="/perfume_video.mp4"
 				className=" -z-40 fixed w-full h-[100dvh] object-cover"
 				autoPlay
 				muted
 				loop
-				preload="auto" 
-			
-			/>
+				playsInline
+			>
+				Your browser does not support the video tag.
+		   </video>
 
 			<div
 				ref={textRef}
@@ -75,8 +81,8 @@ const Header = () => {
 			</div>
 
 			{isSticky && (
-				<div className="fixed left-0 top-0 flex justify-center w-full items-start bg-white py-2 shadow-md z-50">
-					<p className="font-notoSerifKhitan !leading-none text-2xl mobi:!text-[1.5rem] xsmobi:!text-[1rem]">
+				<div className="fixed left-0 top-0 flex justify-center w-full items-start bg-white py-3 shadow-md z-50">
+					<p className="font-notoSerifKhitan !leading-none text-2xl mobi:!text-[1.3rem] ">
 						Scent of a Dream
 					</p>
 				</div>
