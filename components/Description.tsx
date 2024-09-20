@@ -2,6 +2,10 @@
 import React, { useRef } from 'react'
 import Image from 'next/image'
 import useInViewPort from '@/hooks/useInViewPort';
+import elegance from "@/public/characteristics/elegance.jpg"
+import fresh from "@/public/characteristics/fresh.jpg"
+import power from "@/public/characteristics/power.jpg"
+
 
 const Description = () => {
 
@@ -76,7 +80,8 @@ const Description = () => {
               ref={targetRef1}
               className='relative w-full h-[55vh]'>
               <Image
-                src='/characteristics/elegance.jpg'
+              placeholder='blur'
+                src={elegance}
                 alt="Chase"
                 className='rounded-3xl'
                 fill
@@ -98,9 +103,10 @@ const Description = () => {
               ref={targetRef2}
               className='relative w-full h-[55vh]'>
               <Image
-                src='/characteristics/fresh.jpg'
+                src={fresh}
                 alt="Chase"
                 className='rounded-3xl'
+                 placeholder='blur'
                 fill
               />
             </div>
@@ -118,9 +124,10 @@ const Description = () => {
             className='md:grid md:grid-rows-2'>
             <div className='relative w-full h-[55vh]'>
               <Image
-                src='/characteristics/power.jpg'
+                src={power}
                 alt="Chase"
                 className='rounded-3xl'
+                placeholder="blur"
                 fill
               />
             </div>

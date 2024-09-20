@@ -10,7 +10,7 @@ const config = {
         notoSerifKhitan: ["var(--font-notoSerifKhitan)"],
       },
       animation: {
-        "infinite-scroll": "infinite-scroll 25s linear infinite",
+        "infinite-scroll": "infinite-scroll 15s linear infinite",
         "ringing": "ringing 2s ease-in-out infinite ",
         "dot-fade": "dotFadeOut 2s ease-in-out infinite",
       },

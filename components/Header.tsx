@@ -44,7 +44,7 @@ const Header = () => {
 
 
 	return (
-		<header className="relative  min-w-[100dvw] h-[100vh] overflow-hidden ">
+		<header className="relative  min-w-[100dvw] h-[100dvh] overflow-hidden ">
 			
 
 			 <video
