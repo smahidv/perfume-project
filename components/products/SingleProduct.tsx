@@ -5,7 +5,7 @@ type Props = {
     title: string
     description: string
     price: string
-    imageSrc: string
+    imageSrc: any
 };
 
 const SingleProduct = (props: Props) => {
@@ -26,6 +26,7 @@ const SingleProduct = (props: Props) => {
                     src={props.imageSrc}
                     alt="Floral Essence"
                     fill
+                    placeholder='blur'
                 />
             </div>
 

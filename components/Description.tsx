@@ -112,7 +112,7 @@ const Description = () => {
             </div>
 
 
-            <div className='py-12 pb-36  md:grid md:grid-cols-2 md:gap-6 md:grid-flow-col  '>
+            <div className='py-12 lg:pb-36  md:grid md:grid-cols-2 md:gap-6 md:grid-flow-col  '>
               <h4 className='text-3xl leading-10 md:max-w-[20ch] pb-6'>Morning Dew captures the crisp freshness of a new day.</h4>
               <p className='text-[var(--paragraph-color)] leading-7  md:max-w-[50ch]' >This invigorating fragrance combines the zest of citrus with refreshing notes of green tea and a hint of jasmine. Perfect for those who embrace each day with energy and optimism.</p>
             </div>
@@ -131,7 +131,7 @@ const Description = () => {
                 fill
               />
             </div>
-            <div className='py-12 pb-36  md:grid md:grid-cols-2 md:gap-6 md:grid-flow-col '>
+            <div className='py-12 lg:pb-36  md:grid md:grid-cols-2 md:gap-6 md:grid-flow-col '>
               <h4 className='text-3xl leading-10 md:max-w-[20ch] pb-6'>Velvet Ember is a bold and seductive fragrance that commands attention. </h4>
               <p className='text-[var(--paragraph-color)] leading-7  md:max-w-[50ch]'>With rich notes of amber, dark chocolate, and a touch of smoky oud, this scent embodies strength and mystery. Ideal for those who make a powerful impression wherever they go.</p>
             </div>
