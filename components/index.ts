@@ -2,7 +2,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import AboutUs from './AboutUs';
 import Partners from "./Partners";
-import Description from "./Description";
+import Description from "./description/Description";
 import Products from "./products/Products";
 import Contacts from "./Contacts";
 
