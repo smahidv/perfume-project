@@ -42,6 +42,7 @@ const Contacts = () => {
                 alt="girl profile"
                 className="rounded-full border-[3px] border-[#f9f9f9]"
                 fill
+                sizes="40px"
               />
             </div>
             <div className="size-[45px] absolute left-9 top-0  z-20">
@@ -50,6 +51,7 @@ const Contacts = () => {
                 alt="girlSmile"
                 className="rounded-full border-[3px] border-[#f9f9f9]"
                 fill
+                sizes="40px"
               />
             </div>
             <div className="size-[45px] absolute left-[4.5rem] top-0    z-10">
@@ -58,6 +60,7 @@ const Contacts = () => {
                 alt="men"
                 className="rounded-full border-[3px] border-[#f9f9f9]"
                 fill
+                sizes="40px"
               />
             </div>
             <div className="absolute flex justify-center top-0   items-center left-[6.8rem] rounded-full size-[45px] border-[3px] border-[#f9f9f9] bg-black ">

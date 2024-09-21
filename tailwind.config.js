@@ -44,8 +44,6 @@ const config = {
       },
       screens: {
         'mobi': {'min': '0px', 'max': '500px'},
-        'xsmobi': {'min': '0px', 'max': '400px'},
-
       }
     },
   },

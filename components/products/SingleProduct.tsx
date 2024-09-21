@@ -13,7 +13,7 @@ const SingleProduct = (props: Props) => {
         <div className='space-y-3 flex-shrink-0 '>
             <div className='space-y-2'>
                 <h5 className='text-lg font-semibold text-gray-800'>{props.title}</h5>
-                <p className='font-notoSerifKhitan text-sm leading-6 text-gray-600 max-w-[50ch]'>
+                <p className='font-notoSerifKhitan text-sm leading-6 text-gray-600 max-w-[40ch]'>
                     {props.description}
                 </p>
             </div>
@@ -26,6 +26,7 @@ const SingleProduct = (props: Props) => {
                     src={props.imageSrc}
                     alt="Floral Essence"
                     fill
+                    sizes="391px"
                     placeholder='blur'
                 />
             </div>

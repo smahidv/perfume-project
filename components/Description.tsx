@@ -15,15 +15,15 @@ const Description = () => {
   const targetRef3 = useRef<HTMLDivElement>(null);
 
   // Use the useInViewPort hook for each ref
-  const inViewport1 = useInViewPort(targetRef1, { threshold: 0.2 });
-  const inViewport2 = useInViewPort(targetRef2, { threshold: 0.2 });
-  const inViewport3 = useInViewPort(targetRef3, { threshold: 0.2 });
+  const inViewport1 = useInViewPort(targetRef1, { threshold: 0.1 });
+  const inViewport2 = useInViewPort(targetRef2, { threshold: 0.1 });
+  const inViewport3 = useInViewPort(targetRef3, { threshold: 0.1 });
 
 
   return (
-    <div className='bg-[#f2f2f2] px-2 md:mx-0'>
+    <div className='bg-[#f2f2f2] px-2 md:mx-0 pb-6'>
       <h3 className='md:py-28 py-20 md:text-6xl text-[2.5rem] leading-[3rem] max-w-[75%] m-auto text-center '>Crafted for Your Everyday Elegance.</h3>
-      <div className='md:flex gap-16 px-4 md:px-16'>
+      <div className='md:flex gap-[10%] px-4 lg:px-16'>
 
         <aside className='sticky top-20 w-[25%] h-[100vh] space-y-8 py-4 pb-14 hidden md:block  after:absolute after:h-[84%] after:w-[1px] after:left-0 after:bg-[#d9d9d9] after:rounded-md after:top-0'>
           <div
@@ -75,19 +75,20 @@ const Description = () => {
 
 
         <div className='md:w-[75%] '>
-          <div className='md:grid md:grid-rows-2'>
+          <div>
             <div
               ref={targetRef1}
-              className='relative w-full h-[55vh]'>
+              className='relative aspect-video'>
               <Image
               placeholder='blur'
                 src={elegance}
-                alt="Chase"
+                alt="elegance"
+                sizes="(min-width: 780px) calc(67.48vw - 107px), calc(100vw - 64px)"
                 className='rounded-3xl'
                 fill
               />
             </div>
-            <div className=' py-12 lg:pb-36  md:grid md:grid-cols-2 md:gap-6 md:grid-flow-col   '>
+            <div className=' py-12 md:pb-40   md:grid md:grid-cols-2 md:gap-6 md:grid-flow-col   '>
               <h4
                 className='text-3xl leading-10 md:max-w-[20ch] pb-6'>
                 Whispering Silk is the epitome of grace and refinement.</h4>
@@ -97,22 +98,24 @@ const Description = () => {
             </div>
           </div>
 
-          <div className='md:grid md:grid-rows-2'>
+          <div>
 
             <div
               ref={targetRef2}
-              className='relative w-full h-[55vh]'>
+              className='relative aspect-video'>
               <Image
                 src={fresh}
-                alt="Chase"
-                className='rounded-3xl'
+                alt="fresh"
+                className='rounded-3xl '
                  placeholder='blur'
+                sizes="(min-width: 780px) calc(67.48vw - 107px), calc(100vw - 64px)"
+
                 fill
               />
             </div>
 
 
-            <div className='py-12 lg:pb-36  md:grid md:grid-cols-2 md:gap-6 md:grid-flow-col  '>
+            <div className='py-12 pb-36  md:grid md:grid-cols-2 md:gap-6 md:grid-flow-col  '>
               <h4 className='text-3xl leading-10 md:max-w-[20ch] pb-6'>Morning Dew captures the crisp freshness of a new day.</h4>
               <p className='text-[var(--paragraph-color)] leading-7  md:max-w-[50ch]' >This invigorating fragrance combines the zest of citrus with refreshing notes of green tea and a hint of jasmine. Perfect for those who embrace each day with energy and optimism.</p>
             </div>
@@ -120,18 +123,18 @@ const Description = () => {
           </div>
 
           <div
-            ref={targetRef3}
-            className='md:grid md:grid-rows-2'>
-            <div className='relative w-full h-[55vh]'>
+            ref={targetRef3}>
+            <div className='relative aspect-video'>
               <Image
                 src={power}
-                alt="Chase"
+                alt="power"
                 className='rounded-3xl'
                 placeholder="blur"
+                sizes="(min-width: 780px) calc(67.48vw - 107px), calc(100vw - 64px)"             
                 fill
               />
             </div>
-            <div className='py-12 lg:pb-36  md:grid md:grid-cols-2 md:gap-6 md:grid-flow-col '>
+            <div className='py-12 pb-36  md:grid md:grid-cols-2 md:gap-6 md:grid-flow-col '>
               <h4 className='text-3xl leading-10 md:max-w-[20ch] pb-6'>Velvet Ember is a bold and seductive fragrance that commands attention. </h4>
               <p className='text-[var(--paragraph-color)] leading-7  md:max-w-[50ch]'>With rich notes of amber, dark chocolate, and a touch of smoky oud, this scent embodies strength and mystery. Ideal for those who make a powerful impression wherever they go.</p>
             </div>

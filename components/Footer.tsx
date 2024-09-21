@@ -14,6 +14,7 @@ const Footer = () => {
 								alt="logo"
 								className="object-cover"
 								fill
+								sizes="(min-width: 780px) 200px, 180px"
 							/>
 						</div>
 

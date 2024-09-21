@@ -21,7 +21,7 @@ const partners = [
   { src: Liberty, alt: "Liberty" },
   { src: NOBLEPANACEA, alt: "Noble Panacea" },
   { src: ROLEX, alt: "Rolex" },
-  { src: SKIMS, alt: "Skims" },
+
 ];
 
 const Partners = () => {
@@ -43,6 +43,7 @@ const Partners = () => {
                   alt={partner.alt}
                   placeholder="blur"
                   quality={100}
+                  sizes="119px"
                   priority
                   fill
                 />

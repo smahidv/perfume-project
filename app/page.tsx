@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div id="all-content">
     <Header/>
-    <main>
+    <main className="bg-white px-2">
       <AboutUs/>
       <Partners/>
       <Description/>
