@@ -21,12 +21,12 @@ const SingleProduct = (props: Props) => {
                 <p className='text-sm font-notoSerifKhitan text-gray-700'>As low as {props.price}</p>
             </div>
             <div
-                className='relative h-[40vh] shadow-sm rounded-md '>
+                className='relative aspect-square shadow-sm rounded-md '>
                 <Image
                     src={props.imageSrc}
                     alt="Floral Essence"
                     fill
-                    sizes="391px"
+                    sizes="313px"
                     placeholder='blur'
                 />
             </div>

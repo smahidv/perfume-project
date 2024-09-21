@@ -88,7 +88,7 @@ const Description = () => {
                 fill
               />
             </div>
-            <div className=' py-12 md:pb-40   md:grid md:grid-cols-2 md:gap-6 md:grid-flow-col   '>
+            <div className=' py-12 pb-36  md:grid md:grid-cols-2 md:gap-6 md:grid-flow-col   '>
               <h4
                 className='text-3xl leading-10 md:max-w-[20ch] pb-6'>
                 Whispering Silk is the epitome of grace and refinement.</h4>

@@ -13,7 +13,7 @@ const AboutUs = () => {
           priority
           placeholder="blur"
           className=' object-cover'
-          sizes="(min-width: 780px) 50vw, calc(100vw - 16px)"
+        sizes="(min-width: 780px) 50vw, (min-width: 360px) 100vw, calc(-270vw + 1274px)"
           fill
         />
       </div>
