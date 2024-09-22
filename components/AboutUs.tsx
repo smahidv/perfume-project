@@ -18,11 +18,11 @@ const AboutUs = () => {
         />
       </div>
       <div className='md:-order-1 flex justify-center items-center bg-[rgb(237,237,238)] h-full'>
-        <div className='  px-10 space-y-10  md:space-y-20'>
-          <h2 className='font-notoSerifKhitan text-center text-xl md:text-2xl'>
+        <div className='  px-10 space-y-8  xl:space-y-20'>
+          <h2 className='font-notoSerifKhitan text-center font-medium text-lg xl:text-2xl'>
             Born from a <span>passion</span> for artistry and elegance, Scent of a Dream is dedicated to <span>crafting</span> fragrances that <span>inspire</span>  and <span>captivate</span>
           </h2>
-          <p className='font-notoSerifKhitan text-center'>
+          <p className='font-notoSerifKhitan text-center text-sm xl:text-base'>
             Our mission is to create scents that resonate with individuality and elegance, each bottle an invitation to a new sensory adventure.
           </p>
         </div>

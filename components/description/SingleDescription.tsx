@@ -2,7 +2,7 @@
 import Image, { StaticImageData } from "next/image";
 import starinitial from "@/public/icons/starInitial.png";
 import starClicked from "@/public/icons/starClicked.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type SingleDescriptionProps = {
 	imageSrc: StaticImageData;
@@ -24,7 +24,17 @@ const SingleDescription: React.FC<SingleDescriptionProps> = ({
 
 	const handleFavoriteClick = () => {
 		setFavoris((prevState) => !prevState);
+		window.localStorage.setItem('favoris', JSON.stringify(favoris))
 	};
+	useEffect(() => {
+        let storage = window.localStorage.getItem('STATE')
+        if(storage != null) {
+            let storageParsed = JSON.parse(storage)
+            setFavoris(storageParsed)
+        } else {
+            console.log('storage', storage)
+        }
+    }, [])
 
 	return (
 		<div className="bg-[rgb(245,240,237)] p-4 rounded-3xl shadow-md md:relative">
@@ -41,7 +51,7 @@ const SingleDescription: React.FC<SingleDescriptionProps> = ({
 
 			<div className=" md:py-16 py-8 pb-16 md:pb-24 md:grid md:grid-cols-2 md:gap-6 md:grid-flow-col md:place-content-start">
 				<div className="flex justify-between  pb-4 ">
-					<h4 className="text-lg md:max-w-[20ch] font-semibold md:text-2xl self-center md:self-start">{title}</h4>
+					<h4 className="text-lg md:max-w-[20ch] font-medium md:text-[1.7rem] self-center md:self-start">{title}</h4>
 					<div 
 						onClick={handleFavoriteClick}
 						className=" w-8 md:w-12  aspect-square cursor-pointer md:absolute md:left-[50%] md:-translate-x-[50%] md:bottom-5"

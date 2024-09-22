@@ -18,7 +18,7 @@ const SingleProduct = (props: Props) => {
                 </p>
             </div>
             <div>
-                <p className='text-sm font-notoSerifKhitan text-gray-700'>As low as {props.price}</p>
+                <p className='text-sm bg-black p-[.4em] rounded-lg font-medium  font-notoSerifKhitan text-white '>As low as {props.price}</p>
             </div>
             <div
                 className='relative aspect-square shadow-sm rounded-md '>
