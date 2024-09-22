@@ -44,7 +44,7 @@ const Description = () => {
 
   return (
     <div className="px-2 md:mx-0 pb-4">
-      <h3 className="md:py-28 py-10 md:text-6xl text-2xl md:leading-[5rem]  max-w-[75%] font-medium  m-auto text-center">
+      <h3 className="md:py-28 py-10 md:text-6xl text-2xl xs:text-3xl  md:leading-[5rem]  max-w-[75%] font-medium  m-auto text-center">
         Crafted for Your Everyday Elegance.
       </h3>
 
