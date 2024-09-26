@@ -9,7 +9,7 @@ import exoticSpice from "@/public/products/11591.jpg";
 const productList = [
   {
     title: 'Floral Essence',
-    description: 'Experience the delicate allure of blooming flowers with Enchanted Petal.',
+    description: 'Experience the delicate allure of blooming flowers.',
     price: '$11.99',
     imageSrc: floralEssence,
   },
@@ -27,19 +27,19 @@ const productList = [
   },
   {
     title: 'Mystic Woods',
-    description: 'Embrace the earthy aroma of sandalwood and cedar for a grounding experience.',
+    description: 'Embrace the earthy aroma of sandalwood and cedar.',
     price: '$13.49',
     imageSrc: mysticWoods,
   },
   {
     title: 'Citrus Spark',
-    description: 'Bright and invigorating, this scent brings the zest of citrus fruits to life.',
+    description: 'Bright and invigorating, this scent brings fruits to life.',
     price: '$10.99',
     imageSrc: citrusSpark,
   },
   {
     title: 'Exotic Spice',
-    description: 'An adventurous mix of warm spices and rich undertones for the bold.',
+    description: 'An adventurous mix of warm spices and rich undertones.',
     price: '$16.99',
     imageSrc: exoticSpice,
   },
@@ -47,7 +47,8 @@ const productList = [
 
 const Products = () => {
   return (
-    <div className='bg-white md:px-10 px-4 py-32 md:py-64 '>
+    <div className='bg-white md:px-10 px-4 md:py-40 py-20 '>
+      <h3 className="font-notoSerifKhitan md:text-4xl text-2xl pb-4 md:pb-6">our featured products</h3>
       <div className='pb-12 flex scrollbar-webkit snap-x overflow-auto gap-8'>
         {productList.map((product) => (
           <SingleProduct

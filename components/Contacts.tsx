@@ -27,14 +27,14 @@ const Contacts = () => {
     };
   }, []);
 
-  const progresspaddingInline = useTransform(scrollYProgress, [0.9, 1], paddingValues);
+  const progresspaddingInline = useTransform(scrollYProgress, [0.88, 1], paddingValues);
 
   return (
     <motion.div 
       className="bg-black  h-[80vh] "
       style={{ paddingInline: progresspaddingInline }}
     >
-      <div className="bg-white flex justify-center items-center h-full rounded-b-3xl">
+      <div className="bg-white flex justify-center  h-full rounded-b-3xl">
         <div className="space-y-10 ">
           <div className="relative w-fit mx-auto">
             <svg

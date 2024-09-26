@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React from 'react';
 import girlPic from '@/public/171670.jpg';
 import FadeInOut from '@/app/Utils/FadeInOut';
+import { div } from 'framer-motion/client';
 
 const AboutUs = () => {
   // Common animation props to be passed to all FadeInOut components (reducing redundancy )
@@ -13,7 +14,8 @@ const AboutUs = () => {
   };
 
   return (
-    <div className="grid md:grid-cols-2 auto-rows-[1fr] bg-[rgb(245,240,237)] px-1 lg:px-0">
+    <div className='lg:px-0  px-2 '>
+    <div className="grid md:grid-cols-2 auto-rows-[1fr] bg-[rgb(245,240,237)] ">
       {/* Image Section */}
       <FadeInOut {...animationProps} className="relative aspect-square">
         <Image
@@ -39,6 +41,7 @@ const AboutUs = () => {
           </p>
         </FadeInOut>
       </div>
+    </div>
     </div>
   );
 };

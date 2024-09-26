@@ -27,9 +27,9 @@ const partners = [
 const Partners = () => {
   return (
     <div className="bg-white">
-      <div className="md:text-4xl text-2xl md:leading-[2.8rem] font-notoSerifKhitan md:px-12 px-6 pt-24">
+      <h3 className="md:text-4xl text-2xl md:leading-[2.8rem] font-notoSerifKhitan md:px-12 px-6 pt-24">
         We’re proud to partner <br /> with the best
-      </div>
+      </h3>
       <div className="flex gap-4 animate-infinite-scroll border-brands py-16 pb-24">
         {[...Array(2)].map((_, outerIndex) => (
           <div key={outerIndex} className="flex gap-4">

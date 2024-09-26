@@ -13,7 +13,7 @@ const SingleProduct = (props: Props) => {
         <div className='space-y-3 flex-shrink-0 --font-roboto'>
             <div className='space-y-2'>
                 <h5 className='text-lg font-semibold text-gray-800'>{props.title}</h5>
-                <p className=' text-sm leading-6 text-gray-600 max-w-[40ch]'>
+                <p className=' text-sm leading-5  text-gray-600 max-w-[30ch] line-clamp-2'>
                     {props.description}
                 </p>
             </div>
