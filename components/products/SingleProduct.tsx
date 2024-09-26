@@ -10,15 +10,15 @@ type Props = {
 
 const SingleProduct = (props: Props) => {
     return (
-        <div className='space-y-3 flex-shrink-0 '>
+        <div className='space-y-3 flex-shrink-0 --font-roboto'>
             <div className='space-y-2'>
                 <h5 className='text-lg font-semibold text-gray-800'>{props.title}</h5>
-                <p className='font-notoSerifKhitan text-sm leading-6 text-gray-600 max-w-[40ch]'>
+                <p className=' text-sm leading-6 text-gray-600 max-w-[40ch]'>
                     {props.description}
                 </p>
             </div>
             <div>
-                <p className='text-sm bg-black p-[.4em] rounded-lg font-medium  font-notoSerifKhitan text-white '>As low as {props.price}</p>
+                <p className='text-xs bg-black p-[.4em] rounded-lg font-medium w-fit  text-white '>As low as {props.price}</p>
             </div>
             <div
                 className='relative aspect-square shadow-sm rounded-md '>

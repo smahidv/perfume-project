@@ -8,6 +8,7 @@ const config = {
     extend: {
       fontFamily: {
         notoSerifKhitan: ["var(--font-notoSerifKhitan)"],
+        roboto: ["var(--font-roboto)"],
       },
       animation: {
         "infinite-scroll": "infinite-scroll 15s linear infinite",

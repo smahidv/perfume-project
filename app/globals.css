@@ -2,11 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-   --paragraph-color:#646467;
-   --font-size-mobil:16px;
-    
+	--paragraph-color: #646467;
+	--font-size-mobil: 16px;
+	--font-roboto: 'Roboto', sans-serif;
 }
 *,
 *::before,
@@ -19,7 +18,7 @@
 * {
 	margin: 0;
 	padding: 0;
-/* border:1px solid red; */
+	/* border:1px solid red; */
 }
 
 /*
@@ -29,10 +28,7 @@ html,
 body {
 	overflow-x: clip;
 	min-height: 100vh;
-
-
 }
-
 
 body {
 	line-height: 1.5;
@@ -77,11 +73,36 @@ h2 span {
 }
 
 .border-brands img {
-	border: .5px solid rgb(211, 207, 207);
+	border: 0.5px solid rgb(211, 207, 207);
 	padding-inline: 15px;
-	border-radius: .2em;
+	border-radius: 0.2em;
+	
 	object-fit: contain;
 }
+.bg-text {
+	background-image: url("../public//noise.png"),
+		linear-gradient(to left, #000, #000,#070707, #141414, #222222,#222222, #2f2f2f);
+	background-repeat: repeat;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin-top: 200px;
+	font-size: min(8.28vw, 1000px);
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family:var(--ff-logo) ;
+	font-weight: 800;
+	-webkit-font-smoothing: antialiased;
+	transition: background-image 0.5s ease-out;
 
+
+}
+
+.parent:hover  .bg-text  {
+	background-image: url("../public//noise.png"),
+		linear-gradient(to right, #000, #070707, #141414, #222222, #2f2f2f, #3c3c3c);
+
+}
 
 

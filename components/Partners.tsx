@@ -9,7 +9,7 @@ import HarveyNichols from "@/public/partners/HarveyNichols.png";
 import Liberty from "@/public/partners/Liberty.png";
 import NOBLEPANACEA from "@/public/partners/NOBLE-PANACEA.png";
 import ROLEX from "@/public/partners/ROLEX.png";
-import SKIMS from "@/public/partners/SKIMS.png";
+
 
 const partners = [
   { src: chase, alt: "Chase" },
@@ -41,7 +41,6 @@ const Partners = () => {
                 <Image
                   src={partner.src}
                   alt={partner.alt}
-                  placeholder="blur"
                   quality={100}
                   sizes="119px"
                   priority

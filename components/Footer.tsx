@@ -3,12 +3,13 @@ import Image from "next/image";
 import React from "react";
 
 const Footer = () => {
+	
 	return (
-		<footer className="bg-black px-4  md:px-12 md:h-[80vh]  h-[90vh]  ">
-			<div className="h-full relative overflow-hidden  after:absolute after:z-50 after:h-full after:w-[1px] after:top-0 after:right-0 after:bg-[#494949] before:absolute before:z-50 before:h-full before:w-[.8px] before:top-0  before:left-0 before:bg-[#494949]">
-				<div className="md:grid md:grid-cols-2 h-full space-y-10 md:space-y-0">
+		<footer className="bg-black px-4  lg:px-12   h-screen  --font-roboto">
+			<div className="parent h-full relative   after:absolute after:z-40   after:h-screen after:w-[1px] after:top-0 after:right-0 after:bg-[#494949] before:absolute before:z-40 before:h-full before:w-[.8px] before:top-0  before:left-0 before:bg-[#494949]">
+				<div className="lg:grid lg:grid-cols-2 h-full space-y-10 lg:space-y-0  ">
 					<div>
-						<div className="  relative md:pt-10 pt-[25vh] w-[180px] h-[100px] md:w-[200px] md:h-[150px]">
+						<div className="  relative overflow-hidden  pt-[25vh] w-[180px] h-[100px] lg:w-[200px] lg:h-[150px]">
 							<Image
 								src="/logo.png"
 								alt="logo"
@@ -18,7 +19,7 @@ const Footer = () => {
 							/>
 						</div>
 
-						<div className="text-white md:flex gap-7 md:items-center">
+						<div className="text-white lg:flex gap-7 lg:items-center">
 							<p className="mobi:text-sm">©SCENTOFADREAM 2024</p>
 							<div className="font-sans text-[0.7rem] w-fit relative cursor-pointer">
 								Design by SmahiDv
@@ -27,8 +28,8 @@ const Footer = () => {
 						</div>
 					</div>
 
-					<div className="md:grid md:grid-cols-2 space-y-10 md:space-y-0">
-						<div className="space-y-5 md:pt-20 relative z-20 before:absolute before:z-40 before:h-full md:before:w-[1px] before:top-0  before:left-0 before:bg-[#494949] after:absolute  after:h-full md:after:w-[1px] after:top-0 after:right-0 after:bg-[#494949]">
+					<div className="lg:grid lg:grid-cols-2 space-y-10 lg:space-y-0">
+						<div className="space-y-5 lg:pt-20 relative z-20 before:absolute before:z-40 before:h-full lg:before:w-[1px] before:top-0  before:left-0 before:bg-[#494949] after:absolute  after:h-full lg:after:w-[1px] after:top-0 after:right-0 after:bg-[#494949]">
 							<div>
 								<div className="whitespace-normal  text-white h-fit mobi:text-sm">
 									Questions? Write us at{" "}
@@ -75,7 +76,7 @@ const Footer = () => {
 								</svg>
 							</div>
 						</div>
-						<div className="md:space-y-10 space-y-5  w-full md:pt-20  z-20  ">
+						<div className="lg:space-y-10 space-y-5  w-full lg:pt-20  z-20  ">
 							<p className="text-white">Subscribe to our newsletter</p>
 							<div className="relative  w-full ">
 								<label htmlFor="subscribe-email" className="sr-only">
@@ -98,8 +99,7 @@ const Footer = () => {
 					</div>
 				</div>
 
-				<div className="text-[#252525]  absolute bottom-0 [font-size:_clamp(1.8em,9.5vw,9.5em)] select-none capitalize font-bold whitespace-nowrap">
-					{" "}
+				<div className="bg-text  absolute bottom-0  select-none capitalize font-bold whitespace-nowrap">
 				scent of a dream
 				</div>
 			</div>

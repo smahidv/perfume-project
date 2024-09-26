@@ -47,7 +47,7 @@ const productList = [
 
 const Products = () => {
   return (
-    <div className='bg-white md:px-10 px-4 pt-28'>
+    <div className='bg-white md:px-10 px-4 py-32 md:py-64 '>
       <div className='pb-12 flex scrollbar-webkit snap-x overflow-auto gap-8'>
         {productList.map((product) => (
           <SingleProduct
