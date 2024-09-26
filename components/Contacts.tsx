@@ -31,10 +31,10 @@ const Contacts = () => {
 
   return (
     <motion.div 
-      className="bg-black  h-[80vh] "
+      className="bg-black   "
       style={{ paddingInline: progresspaddingInline }}
     >
-      <div className="bg-white flex justify-center  h-full rounded-b-3xl">
+      <div className="bg-white flex justify-center md:pb-40 pb-20 rounded-b-3xl">
         <div className="space-y-10 ">
           <div className="relative w-fit mx-auto">
             <svg
