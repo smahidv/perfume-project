@@ -1,9 +1,9 @@
 import Image, { StaticImageData } from "next/image";
 import starinitial from "@/public/icons/starInitial.png";
 import starClicked from "@/public/icons/starClicked.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TrackedSection } from "./TrackedSection";
-import FadeInOut from "@/app/Utils/FadeInOut";
+import FadeInOut from "@/Utils/FadeInOut";
 
 type SingleDescriptionProps = {
 	imageSrc: StaticImageData;
@@ -14,6 +14,10 @@ type SingleDescriptionProps = {
 	idSection: number;
 };
 
+type FavorisState = {
+	[key: number]: boolean;
+};
+
 const SingleDescription: React.FC<SingleDescriptionProps> = ({
 	imageSrc,
 	title,
@@ -22,11 +26,34 @@ const SingleDescription: React.FC<SingleDescriptionProps> = ({
 	alt,
 	idSection,
 }) => {
-	const [favoris, setFavoris] = useState(false);
+	// Initialize state with an empty object
+	const [favoris, setFavoris] = useState<FavorisState>({});
 
-	const handleFavoriteClick = () => {
-		setFavoris((prevState) => !prevState);
-	};
+	// Function to handle favorite click
+	function handleFavoriteClick(id: number) {
+		setFavoris((prevState) => {
+			const updatedFavoris = {
+				...prevState,
+				[id]: !prevState[id], // Toggle the favorite status
+			};
+
+			// Save the updated state to localStorage
+			localStorage.setItem("favoris", JSON.stringify(updatedFavoris));
+			return updatedFavoris;
+		});
+	}
+
+	// Use useEffect to load favoris from localStorage on initial render
+	useEffect(() => {
+		const storedFavoris = localStorage.getItem("favoris");
+		if (storedFavoris) {
+			setFavoris(JSON.parse(storedFavoris)); // Hydrate state from localStorage
+		}
+	}, []);
+
+	useEffect(() => {
+		console.log(favoris); // You can check the state updates here
+	}, [favoris]);
 
 	return (
 		<TrackedSection
@@ -52,15 +79,15 @@ const SingleDescription: React.FC<SingleDescriptionProps> = ({
 					animate={{ opacity: 1, y: 0 }}
 					className=" lg:py-16 py-8 pb-16 lg:pb-24 lg:grid lg:grid-cols-2 lg:gap-6 lg:grid-flow-col lg:place-content-start"
 				>
-					<div className="flex justify-between  pb-4 ">
-						<h4 className="text-lg lg:max-w-[20ch] font-notoSerifKhitan  font-medium lg:text-[1.7rem] self-center lg:self-start">
+					<div className="flex justify-between pb-4">
+						<h4 className="text-lg lg:max-w-[20ch] font-notoSerifKhitan font-medium lg:text-[1.7rem] self-center lg:self-start">
 							{title}
 						</h4>
 						<div
-							onClick={handleFavoriteClick}
-							className=" w-8 lg:w-12  aspect-square cursor-pointer lg:absolute lg:left-[50%] lg:-translate-x-[50%] lg:bottom-5"
+							onClick={() => handleFavoriteClick(idSection)}
+							className="w-8 lg:w-12 aspect-square cursor-pointer lg:absolute lg:left-[50%] lg:-translate-x-[50%] lg:bottom-5"
 						>
-							{favoris ? (
+							{favoris[idSection] ? (
 								<Image src={starClicked} alt="favoris filled" />
 							) : (
 								<Image src={starinitial} alt="favoris initial" />
