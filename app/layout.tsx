@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import {Noto_Serif_Khitan_Small_Script,Roboto } from 'next/font/google';
+import SplashScreenManager from "@/Utils/SplashScreenManager";
 
 const notoSerifKhitan = Noto_Serif_Khitan_Small_Script({
   weight: "400", // Ensure this weight is available for the font
@@ -28,7 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${notoSerifKhitan.variable} ${roboto.variable}`}>
       <body >
+        <SplashScreenManager>
         {children}
+        </SplashScreenManager>
       </body>
     </html>
   );

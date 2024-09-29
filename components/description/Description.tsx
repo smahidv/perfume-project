@@ -65,7 +65,6 @@ const Description = () => {
 								alt={item.alt}
 								sidebarDescription={item.sidebarDescription}
 								idSection={index}
-							
 							/>
 						))}
 					</div>

@@ -1,0 +1,19 @@
+.container {
+	display: flex;
+	justify-content: center;
+	height: 100dvh;
+    min-width: 100dvw;
+	align-items: center;
+    overflow: hidden;
+
+}
+
+.img-container {
+position: relative;
+width: clamp(120px,50vw,300px);
+height:clamp(120px,50vw,300px); 
+
+}
+.img-container img{
+    object-fit: cover;
+}

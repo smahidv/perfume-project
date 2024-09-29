@@ -15,7 +15,7 @@ type SingleDescriptionProps = {
 };
 
 type FavorisState = {
-	[key: number]: boolean;
+	[key: number]: boolean; // structure of an object
 };
 
 const SingleDescription: React.FC<SingleDescriptionProps> = ({
@@ -47,13 +47,9 @@ const SingleDescription: React.FC<SingleDescriptionProps> = ({
 	useEffect(() => {
 		const storedFavoris = localStorage.getItem("favoris");
 		if (storedFavoris) {
-			setFavoris(JSON.parse(storedFavoris)); // Hydrate state from localStorage
+			setFavoris(JSON.parse(storedFavoris)); // because data in localStorage is stored as strings
 		}
 	}, []);
-
-	useEffect(() => {
-		console.log(favoris); // You can check the state updates here
-	}, [favoris]);
 
 	return (
 		<TrackedSection
